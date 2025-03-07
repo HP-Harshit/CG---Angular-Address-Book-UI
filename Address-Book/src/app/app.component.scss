@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.6); 
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 2px solid rgb(114, 122, 127);
+}
+
+header {
+  height: 60px;
+  margin: 0.7%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+
+.Add {
+  position: relative;
+  top: -30px;
+  left: 5px;
+  margin: 3px;
+  font-weight: bolder;
+  color: blue;
+  font-size: 20px;
+}
+
+.Book {
+  position: relative;
+  top: -10px;
+  left: -60px;
+  margin: 3px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.7%;
+  width: 100%; 
+}
+
+.caption {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 1%;
+}
+
+.addPerson {
+  width: 3rem;
+  height: 3rem;
+  margin: 1%;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 132, 255);
+}
+
+.addPersonImg {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.records {
+  background: rgb(241, 241, 241, 0.6);
+  height: 90%;
+  border-top: 1px solid blue;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: auto 10px;
+  background: rgb(236, 236, 236, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 7px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.rowHeader span {
+  color: rgb(11, 74, 183);
+  font-size: 18px;
+  font-weight: 200;
+  width: 13%;
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  margin: 7px 10px;
+  background: rgb(236, 236, 236, 0.2);
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  border-radius: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.record span {
+  align-items: center;
+  width: 13%;
+  padding: 2px;
+}
+
+.record .icons {
+  border: 0px;
+}
+
+.record button {
+  margin: auto 7px;
+  border: 0px;
+  border-radius: 50%;
+}
+
+.record button img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+button img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.record:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.record button img:hover {
+  background-color: #ccc;
+}
+
+.form-container {
+  width: 90%; 
+  height: calc(100% - 130px); 
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  box-shadow: 1px 1px 6px rgba(92, 92, 92, 0.9);
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10; 
+}
+
+.form-container form {
+  width: 90%;
+  height: 90%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-container input {
+  width: 100%;
+  height: 2rem;
+  background-color: rgba(247, 241, 241, 0.4);
+  padding: 5px;
+  border: 1px solid #512121;
+  border-radius: 5px;
+}
+
+#btn {
+  width: 100%; 
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+}
+.form-container form button {
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+#btn1:hover {
+  background-color: #0366d0;
+  color: #ffffff;
+}
+
+#btn2:hover {
+  background-color: #7e7e80;
+  color: #ffffff;
+}
+
+#btn3:hover {
+  background-color: #d9534f;
+  color: #ffffff;
+}
+
+.heading-form {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #047dff;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}

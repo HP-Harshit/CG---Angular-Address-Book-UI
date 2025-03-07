@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="box">
+    <header>
+      <img src="../assets/contact-book.png" alt="AddressBook" class="logo" />
+      <span class="Add">Address</span>
+      <span class="Book">Book</span>
+    </header>
+
+    <div class="form-container" *ngIf="showForm">
+      <div class="heading-form">Person Address Form</div>
+      <form (ngSubmit)="savePerson()">
+        <div class="input-container">
+          <input [(ngModel)]="newPerson.name" name="name" placeholder="Full Name" required />
+          <input [(ngModel)]="newPerson.address" name="address" placeholder="Address" required />
+          <input [(ngModel)]="newPerson.city" name="city" placeholder="City" required />
+          <input [(ngModel)]="newPerson.state" name="state" placeholder="State" required />
+          <input [(ngModel)]="newPerson.zipcode" name="zipcode" placeholder="Zip Code" required />
+          <input [(ngModel)]="newPerson.phone" name="phone" placeholder="Phone Number" required />
+        </div>
+        <div id="btn">
+          <button type="submit" id="btn1">{{ editMode ? 'Save' : 'Add' }}</button>
+          <button type="button" id="btn2" (click)="resetForm()">Cancel</button>
+          <button type="reset" id="btn3">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="records" *ngIf="!showForm">
+      <div class="heading">
+        <span class="caption">Person Details</span>
+        <button (click)="addPerson()" class="addPerson">
+          <img src="../assets/incorporation.png" alt="Add Person" class="addPersonImg" />
+        </button>
+      </div>
+      <div class="rowHeader">
+        <span>Fullname</span>
+        <span>Address</span>
+        <span>City</span>
+        <span>State</span>
+        <span>Zip Code</span>
+        <span>Phone Number</span>
+        <span>Actions</span>
+      </div>
+      <div class="record" *ngFor="let person of people; let i = index">
+        <span>{{ person.name }}</span>
+        <span>{{ person.address }}</span>
+        <span>{{ person.city }}</span>
+        <span>{{ person.state }}</span>
+        <span>{{ person.zipcode }}</span>
+        <span>{{ person.phone }}</span>
+        <span class="icons">
+          <button (click)="editPerson(person)">
+            <img src="../assets/edit.png" alt="Edit" />
+          </button>
+          <button (click)="deletePerson(person)">
+            <img src="../assets/bin.png" alt="Delete" />
+          </button>
+          <!-- <span></span>
+          <span></span> -->
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
